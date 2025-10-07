@@ -6,6 +6,7 @@ int main(){
         int mt = 1;
         int mb = 1;
         int mr = 1;
+        int mc = 1;
 
         do
         {
@@ -31,6 +32,19 @@ int main(){
         }
         
 
+        //Cavalo!
+
+        while (mc == 1)
+        {
+            for ( mc = 0; mc <= 2; mc++)
+            {
+                printf("O cavalo anda para baixo!\n");
+                mc++;
+            }
+            printf("O cavalo anda para a esquerda!\n");
+            
+        }
+        
 
 
 
