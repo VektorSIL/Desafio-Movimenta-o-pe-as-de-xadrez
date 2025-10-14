@@ -1,52 +1,58 @@
 #include <stdio.h>
 
+//Torre!
+
+void mt(int casas){
+    if (casas > 0)
+    {
+        printf("A torre se moce para direita!\n");
+        mt(casas -1);
+    }
+}
+
+//Rainha!
+
+void mr(int casas){
+    if (casas > 0)
+    {
+        printf("A rainha se move para esquerda!\n");
+        mr(casas - 1);
+    }
+    
+}
+
+//Bispo
+
+void mb(int casas){
+    for (int v = 1; v <= 5; v++)
+    {
+        printf("O bispo se move para cima!\n");
+        for (int h = 1; h <=1; h++)
+        {
+            printf("O bispo se move para direita! \n");
+        }
+    }
+    
+}
+
+
 int main(){
-        //Torre!
 
-        int mt = 1;
-        int mb = 1;
-        int mr = 1;
-        int mc = 1;
+    mt (5);
+    mr (8);
+    mb (5);
 
-        do
-        {
-            printf("A torre anda para direita!\n");
-            mt++;
-        } while ( mt <= 5 );
-        
+    //Cavalo!
 
-        //Bispo!
-
-        while (mb <=5 )
-        {
-            printf("O Bispo anda para cima e para direita!\n");
-            mb++;
+    for (int c = 0; c < 2; c++) {
+      printf("O cavalo se move para cima!\n");
+    
+      if (c == 2 - 1) { 
+        for (int l = 0; l < 1; l++) {
+            printf("O cavalo se move para a direita!\n");
         }
-        
-
-        //Rainha!
-
-        for (int mr = 1; mr <= 8; mr++)
-        {
-            printf("A rainha anda para esquerda!\n");
-        }
-        
-
-        //Cavalo!
-
-        while (mc == 1)
-        {
-            for ( mc = 0; mc <= 2; mc++)
-            {
-                printf("O cavalo anda para baixo!\n");
-                mc++;
-            }
-            printf("O cavalo anda para a esquerda!\n");
-            
-        }
-        
-
-
-
+      }
+    }
     return 0;
 }
+
